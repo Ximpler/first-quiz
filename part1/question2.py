@@ -15,7 +15,16 @@
 # it. As always, there is a test suite that checks the result. It is in 
 # `question2_test.py.`
 
-swapper = None
+def Fun_Swapper(tupla):
+  tupla = list(tupla)
+  tupla[0], tupla[1] =  tupla[1], tupla[0]
+  tupla = tuple(tupla)
+  return tupla
+
+
+swapper = Fun_Swapper
+
+
 
 def run_swapper(list_of_tuples):
   return list(map(swapper, list_of_tuples))
